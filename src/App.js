@@ -52,6 +52,7 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  
   return (
     <div>
       <h1>Todo App</h1>
