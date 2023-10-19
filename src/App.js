@@ -18,8 +18,8 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
   const { user, login, logout } = useUser();
-  const [username, setUsername] = useState(''); // Add state for username
-  const [password, setPassword] = useState(''); // Add state for password
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const openModal = () => {
     setIsModalOpen(true);
