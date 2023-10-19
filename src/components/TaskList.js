@@ -13,24 +13,30 @@ function TaskList({ tasks, onTaskView, onTaskDelete }) {
   }, [tasks]);
 
   return (
-    <ul>
-      {tasks.map((task) => (
-        <li key={task.id}>
-          <div className="task-container">
-            <div>
-              <span>{task.text}</span>
-              <p>{shortenedDescriptions[task.id]}</p>
-            </div>
-            <div className="button-container">
-              <button onClick={() => onTaskView(task)} className="view">
-                View
-              </button>
-              <button onClick={() => onTaskDelete(task.id)}>Delete</button>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div>
+      {tasks.length === 0 ? (
+        <p>You have no tasks</p>
+      ) : (
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              <div className="task-container">
+                <div>
+                  <span>{task.text}</span>
+                  <p>{shortenedDescriptions[task.id]}</p>
+                </div>
+                <div className="button-container">
+                  <button onClick={() => onTaskView(task)} className="view">
+                    View
+                  </button>
+                  <button onClick={() => onTaskDelete(task.id)}>Delete</button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
