@@ -60,6 +60,7 @@ function App() {
     }
   };
 
+  // we can return the value
   return (
     <div>
       <h1>Todo App</h1>
